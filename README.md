@@ -6,10 +6,22 @@ Over All Steps
 | 1 | Must     	| Vpn         	| clash                                                                                               	|
 | 2 | Must     	| Iterm2      	| [iterm2 Profile import](iterm2Profiles.json)<br>[oh my zsh](https://ohmyz.sh/)<br>`echo 'bindkey \^U backward-kill-line' >> ~/.zshrc`                         	|
 | 3 | Must     	| ScreenSplit 	| [Rectangle](https://rectangleapp.com/) <br> [Other Suggest](https://www.v1tx.com/post/best-mac-split-screen-app/) 	|
-| 4 | Must     	| Git&Python  	| [Miniconda](https://docs.conda.io/en/latest/miniconda.html) <br>[Pre-commit](https://pre-commit.com/)                                                 	|
-| 5 | Must     	| Develop     	| [Homebrew](https://brew.sh)  <br>[Vscode](https://code.visualstudio.com/)                                                                 	|
+| 4 | Must     	| Git&Python  	| [Miniconda](https://docs.conda.io/en/latest/miniconda.html) <br>[Pre-commit](https://pre-commit.com/)                                              	|
+| 5 | Must     	| Develop     	| [Homebrew](https://brew.sh)<br> LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443  <br>[Vscode](https://code.visualstudio.com/)                                                                 	|
 |6| Optional 	| SSH         	| Multiple SSH                                                                                        	|
 | 7 | Suggest  	| Other       	| Alfred<br>![other useful](other_useful_app.png)                                                                                    	|
+
+
+
+SSL_ERROR_SYSCALL
+=====================
+
+```bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+https://stackoverflow.com/questions/48987512/ssl-connect-ssl-error-syscall-in-connection-to-github-com443
+
+
 
 
 Multiple SSH Keys settings for different github account
