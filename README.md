@@ -102,3 +102,18 @@ then use normal flow to push your code
 	$ git push
 
 
+Pylint
+=========
+
+'''bash
+pip install pylint-flask
+
+pip install pylint-flask-sqlalchemy
+'''
+
+
+"python.linting.pylintArgs": ["--load-plugins", "pylint_flask_sqlalchemy", "pylint_flask"]
+https://stackoverflow.com/questions/28193025/pylint-cant-find-sqlalchemy-query-member
+
+
+https://stackoverflow.com/questions/42789666/pylint-error-message-on-cloud-9-cs50
