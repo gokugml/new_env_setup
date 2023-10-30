@@ -70,13 +70,22 @@ Then added
 		HostName github.com
 		User git
 		IdentityFile ~/.ssh/id_rsa_github1
+		AddKeysToAgent yes
+		UseKeychain yes
 
 	#github2 account
 	Host github.com-github2
 		HostName github.com
 		User git
 		IdentityFile ~/.ssh/id_rsa_github2
+		AddKeysToAgent yes
+		UseKeychain yes
 
+
+Following config used for macOS Sierra 10.12.2 or later [github SSH instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+	AddKeysToAgent yes
+	UseKeychain yes
 
 Clone you repo and modify your Git config
 ---------------------------------------------
