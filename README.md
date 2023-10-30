@@ -111,6 +111,20 @@ then use normal flow to push your code
 	$ git push
 
 
+VS code env set up to include workspaceFolder
+======================================================
+https://stackoverflow.com/questions/62366211/vscode-modulenotfounderror-no-module-named-x
+Solution:
+Press Ctrl + Shift + P to open Command Palette
+Go to Users.setting.json
+Add the following line
+
+```
+"terminal.integrated.env.osx": { "PYTHONPATH": "${workspaceFolder}" }
+```
+
+
+
 Pylint
 =========
 
