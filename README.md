@@ -42,7 +42,7 @@ for example, 2 keys created at:
 	~/.ssh/id_rsa_github1
 	~/.ssh/id_rsa_github2
 
-then, add these two keys as following
+[IMPORTANT] then, add these two keys as following. 
 
 	$ ssh-add ~/.ssh/id_rsa_github1
 	$ ssh-add ~/.ssh/id_rsa_github2
@@ -95,51 +95,82 @@ clone your repo (change default git@github.com to git@github.com-github2)
 
 cd gfs_github2 and modify git config
 
-	$ git config user.name "github2"
-	$ git config user.email "github2@gmail.com" 
+``` bash
+git config user.name "github2"
+git config user.email "github2@gmail.com" 
+```
  
 
 or you can have global git config
-	$ git config --global user.name "github2"
-	$ git config --global user.email "github2@gmail.com"
-
+``` bash
+git config --global user.name "github2"
+git config --global user.email "github2@gmail.com"
+```
 
 then use normal flow to push your code
-
-	$ git add .
-	$ git commit -m "your comments"
-	$ git push
-
+``` bash
+git add .
+git commit -m "your comments"
+git push
+```
 
 VS code env set up to include workspaceFolder
 ======================================================
-https://stackoverflow.com/questions/62366211/vscode-modulenotfounderror-no-module-named-x
-Solution:
+For Error
+
+```bash
+ModuleNotFoundError: No module name 'x'
+
+```
+
+
+[Solution](https://stackoverflow.com/questions/62366211/vscode-modulenotfounderror-no-module-named-x):
 Press Ctrl + Shift + P to open Command Palette
 Go to Users.setting.json
 Add the following line
-
+* MacOS
 ```
 "terminal.integrated.env.osx": { "PYTHONPATH": "${workspaceFolder}" }
 ```
 
-
+* Windows
+```
+"terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" }
+```
 
 Pylint
 =========
-
-'''bash
-pip install pylint-flask
-
-pip install pylint-flask-sqlalchemy
-'''
+For Error `Instance of 'SQLAlchemy' has no 'Table' member (no-member)`
 
 
-"python.linting.pylintArgs": ["--load-plugins", "pylint_flask_sqlalchemy", "pylint_flask"]
 https://stackoverflow.com/questions/28193025/pylint-cant-find-sqlalchemy-query-member
 
+```bash
+pip install pylint-flask
+pip install pylint-flask-sqlalchemy
+```
+``` json
+"python.linting.pylintArgs": ["--load-plugins", "pylint_flask_sqlalchemy", "pylint_flask"]
+```
+
+
+For Error 
+```
+instance of SQLAlchemy has no column member
+instance of SQLAlchemy has no integer member
+instance of SQLAlchemy has no text member
+instance of scoped_session has no add member
+instance of scoped_session has no commit member
+Class Registrants has no query member
+```
 
 https://stackoverflow.com/questions/42789666/pylint-error-message-on-cloud-9-cs50
+
+needed to add in the .pylintrc file:
+
+```
+ignored-classes=SQLObject,Registrant,scoped_session
+```
 
 
 Nginx
