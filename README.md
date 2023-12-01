@@ -140,3 +140,12 @@ https://stackoverflow.com/questions/28193025/pylint-cant-find-sqlalchemy-query-m
 
 
 https://stackoverflow.com/questions/42789666/pylint-error-message-on-cloud-9-cs50
+
+
+Nginx
+========
+* [install nginx](https://www.javatpoint.com/installing-nginx-on-mac)
+* 编辑 Nginx 的主配置文件`/usr/local/nginx/conf/nginx.conf`你可以使用任何文本编辑器打开该文件
+* 在 http 块内添加以下行，以包含 conf.d 文件夹中的所有配置文件`include /usr/local/nginx/conf.d/*.conf;`
+* 检查配置文件正确性`sudo nginx -t`，重启nginx `sudo nginx -s reload`
+
